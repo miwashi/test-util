@@ -20,9 +20,32 @@ import java.util.UUID;
 import com.google.gson.Gson;
 
 public class Notifier implements TestListener {
+	
+	protected String statServer = "localhost";
+    protected int statServerPort = 6500;
 
     private UUID uuid = UUID.randomUUID();
 
+    public Notifier(){
+    	super();
+    }
+    
+    public Notifier(String host, int port){
+    	super();
+    	statServer = host;
+    	statServerPort = port;
+    }
+    
+    public Notifier(String host){
+    	super();
+    	statServer = host;
+    }
+    
+    public Notifier(int port){
+    	super();
+    	statServerPort = port;
+    }
+    
     @Override
     public void beforeSuite(TestDescriptor testDescriptor) {
     }
@@ -85,10 +108,6 @@ public class Notifier implements TestListener {
         String json = new Gson().toJson(status);
         return json;
     }
-
-    //protected String statServer = "192.168.59.3";
-    protected String statServer = "svt-stoprod-support01.svt.se";
-    protected int statServerPort = 6500;
 
     protected void sendByUDP(String msg) {
         try {
