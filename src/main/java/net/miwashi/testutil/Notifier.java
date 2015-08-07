@@ -1,4 +1,4 @@
-package com.miwashi.testutil;
+package net.miwashi.testutil;
 
 import org.gradle.api.tasks.testing.TestDescriptor;
 import org.gradle.api.tasks.testing.TestListener;

@@ -19,3 +19,4 @@ hs_err_pid*
 .gradle/2.2.1/taskArtifacts/cache.properties
 /.gradle/
 /.settings/
+/bin/

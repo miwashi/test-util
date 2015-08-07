@@ -5,7 +5,7 @@ apply plugin: 'signing'
 
 sourceCompatibility = 1.8
 version = '1.0'
-group = "com.miwashi"
+group = "net.miwashi"
 archivesBaseName = "test-util"
 version = "1.1"
 
@@ -23,10 +23,11 @@ jar {
 }
 
 repositories {
-    mavenCentral()
-}
+        mavenCentral()
+    }
 
 dependencies {
+	compile 'com.github.goldin.plugins.gradle:common:0.3.1'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'org.json:json:20141113'
     compile 'org.apache.httpcomponents:httpclient:4.4'
