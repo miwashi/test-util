@@ -81,6 +81,10 @@ public class Notifier implements TestListener {
         String buildId = env.get("BUILD_ID");
         String buildUrl = env.get("BUILD_URL");
         String jobName = env.get("JOB_NAME");
+        String nodeName = env.get("NODE_NAME");
+        String buildTag = env.get("BUILD_TAG");
+        String jenkinsUrl = env.get("JENKINS_URL");
+
         String gitCommit = env.get("GIT_COMMIT");
         String gitURL = env.get("GIT_URL");
         String gitBranch = env.get("GIT_BRANCH");
@@ -100,6 +104,10 @@ public class Notifier implements TestListener {
         status.put("user",user);
         status.put("buildId",buildId);
         status.put("buildNumber",buildNumber);
+        status.put("buildUrl",buildUrl);
+        status.put("jenkinsUrl",jenkinsUrl);
+        status.put("nodeName",nodeName);
+        status.put("buildTag",buildTag);
         status.put("jobName",jobName);
         status.put("gitCommit",gitCommit);
         status.put("gitBranch",gitBranch);
